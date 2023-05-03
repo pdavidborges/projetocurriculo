@@ -1,0 +1,207 @@
+/*
+seletor{
+    propriedade:valor;
+}
+*/
+/*
+@font-face {
+    font-family: 'longshot';
+    src: url(font/Long_Shot.ttf);
+}
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{    
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+    font-weight: 400; /*peso da fonte "negrito"*/
+    color: #250055;    
+    margin: 0;
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive; 
+    font-weight: 400;
+    color: #666666;
+    margin: 0;
+}
+
+h2 a{
+    color: #250055;
+}
+
+p{
+    color: #666666;
+    font-size: 20px;
+}
+
+ul{
+    margin: 0; /*espaçamento externo*/
+    padding: 0; /*espaçamento interno*/
+    list-style: none; /*retirando o marcador da lista*/    
+}
+
+.container{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    width: 1230px;
+}
+
+.sidebar{
+    width: 280px;
+    height: 100vh; /*vh -> view height*/
+    background-color: #250055;
+    text-align: center;        
+}
+
+.sidebar img{   
+    margin-top: 65px;
+    margin-bottom: 65px;
+    border-radius: 50%; /*arredondamento*/    
+}
+
+/*formatando todos os links que estão dentro da sidebar*/
+.sidebar a{
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    text-decoration: none; /*retirando o sublinhado padrão dos links*/       
+}
+
+/*ao passar o mouse*/
+.sidebar a:hover{
+    color: #FFE600;
+    text-decoration: underline;
+}
+
+.sidebar li{
+    margin-bottom: 33px;
+}
+
+.content{
+    width: 900px;    
+}
+
+.social{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.social a{
+    text-decoration: none;
+    margin-right: 16px;    
+}
+
+.social svg:hover{
+    transform: scale(1.1);
+}
+
+.social a:hover path{
+    fill: #250055;
+}
+
+.copyright{
+    font-size: 14px;
+    color: #250055;
+}
+
+
+/*MEDIA QUERIES*/
+/*se o tamanho da tela for de até 1279px*/
+@media (max-width: 1279px){
+
+    .container{
+        width: 100%;
+    }
+
+    .sidebar{
+        width: 25%;
+    }
+
+    .content{
+        width: 70%;
+        margin-right: 10px;
+    }
+
+}
+
+
+@media (max-width: 999px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    
+    .sidebar img{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sidebar li{
+        display: inline; /*para os itens da lista ficarem lado a lado*/
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .content{
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 679px){
+
+    .sidebar img{
+        width: 80px;
+        margin-bottom: 30px;
+    }
+
+    .sidebar a{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+
+    h2{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .social svg{
+        transform: scale(0.8);
+    }
+
+}
+
+
+
+/*Formatação para caso de impressão da página (ctrl + p)*/
+@media print{
+
+    h1{
+        color: black;
+    }
+
+    .social{
+        display: none;
+    }
+}
